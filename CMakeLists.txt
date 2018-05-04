@@ -110,6 +110,9 @@ else()
   set(TEST_SUITE_PROFILE_GENERATE "False")
 endif()
 
+# For RewardPolicy2 to link with function-time lib
+list(APPEND LDFLAGS -lfunctime)
+
 option(TEST_SUITE_PROFILE_USE
       "Add apropriate -fprofile-instr-use to CFLAGS/CXXFLAGS for each benchmark"
       Off)
